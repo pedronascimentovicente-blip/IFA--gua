@@ -3,85 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal de Recursos Hídricos</title>
-    <!-- Link para o arquivo de estilos CSS -->
+    <title>Porta Aqua - Informativo Hídrico</title>
+    <!-- Vinculando o arquivo CSS separado -->
     <link rel="stylesheet" href="style.css">
-    <!-- Ícones externos para as redes sociais no rodapé -->
-    <link rel="stylesheet" href="https://cloudflare.com">
 </head>
 <body>
 
-    <div class="interface-container">
+    <!-- PAINEL LATERAL ESQUERDO -->
+    <div class="info-panel">
+        <div class="brand">
+            <h2>Porta Aqua</h2>
+            <h1>Aqua</h1>
+        </div>
         
-        <!-- Painel Lateral Esquerdo (Fixo) -->
-        <aside class="sidebar">
-            <div class="logo-area">
-                <span class="portal-text">Portal do</span>
-                <h1 class="main-logo">SNIRH</h1>
-            </div>
+        <div class="description">
+            <h3>Cada gota conta, pense no amanhã</h3>
+            <p>A base conceitual para a disponibilização de informações sobre a crise, a poluição e as soluções urgentes para as águas do nosso planeta.</p>
+        </div>
 
-            <div class="description-area">
-                <h2>Sistema Nacional de Informações sobre Recursos Hídricos</h2>
-                <p>A base conceitual para a disponibilização de informações sobre a crise, a poluição e as soluções urgentes para as águas.</p>
-            </div>
-
-            <div class="footer-area">
-                <div class="brand-logo">▶ AGUAVIVA</div>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="far fa-envelope"></i></a>
-                </div>
-            </div>
-        </aside>
-
-        <!-- Painéis Verticais Interativos (Menu Principal) -->
-        <main class="navigation-panels">
-            
-            <a href="#problemas" class="panel-item panel-1">
-                <div class="panel-content">
-                    <span class="panel-title">Ler Diagnósticos e Problemas</span>
-                </div>
-            </a>
-
-            <a href="#mapas" class="panel-item panel-2">
-                <div class="panel-content">
-                    <span class="panel-title">Navegar em Mapas Críticos</span>
-                </div>
-            </a>
-
-            <a href="#dados" class="panel-item panel-3">
-                <div class="panel-content">
-                    <span class="panel-title">Explorar Indicadores e Gráficos</span>
-                </div>
-            </a>
-
-            <a href="#historico" class="panel-item panel-4">
-                <div class="panel-content">
-                    <span class="panel-title">Linha do Tempo Interativa</span>
-                </div>
-            </a>
-
-            <a href="#solucoes" class="panel-item panel-5">
-                <div class="panel-content">
-                    <span class="panel-title">Consultar Soluções Globais</span>
-                </div>
-            </a>
-
-            <a href="#reportagens" class="panel-item panel-6">
-                <div class="panel-content">
-                    <span class="panel-title">Ver Reportagens e Artigos</span>
-                </div>
-            </a>
-
-        </main>
+        <div class="logo-footer">
+            ▶ AGUAVIVA
+        </div>
     </div>
 
-    <!-- Script JavaScript -->
+    <!-- SEÇÃO DAS BARRAS DE NAVEGAÇÃO INTERATIVAS -->
+    <div class="bars-container">
+        <a href="#diagnosticos" class="nav-bar bar-1" data-destino="Ferramenta de Diagnósticos de Poluição">
+            <span class="bar-text">LER DIAGNÓSTICOS E PROBLEMAS</span>
+        </a>
+        
+        <a href="#mapas" class="nav-bar bar-2" data-destino="Mapa de Monitoramento em Tempo Real">
+            <span class="bar-text">NAVEGAR EM MAPAS CRÍTICOS</span>
+        </a>
+        
+        <a href="#indicadores" class="nav-bar bar-3" data-destino="Painel de Gráficos e Estatísticas">
+            <span class="bar-text">EXPLORAR INDICADORES E GRÁFICOS</span>
+        </a>
+        
+        <a href="#linha-tempo" class="nav-bar bar-4" data-destino="Linha do Tempo das Mudanças Climáticas">
+            <span class="bar-text">LINHA DO TEMPO INTERATIVA</span>
+        </a>
+        
+        <a href="#solucoes" class="nav-bar bar-5" data-destino="Catálogo de Soluções Sustentáveis Globais">
+            <span class="bar-text">CONSULTAR SOLUÇÕES GLOBAIS</span>
+        </a>
+        
+        <a href="#reportagens" class="nav-bar bar-6" data-destino="Central de Reportagens e Artigos">
+            <span class="bar-text">VER REPORTAGENS E ARTIGOS</span>
+        </a>
+    </div>
+
+    <!-- RODAPÉ COMPLEMENTAR -->
+    <div class="fixed-footer">
+        IFA 2026
+    </div>
+
+    <!-- Vinculando o arquivo JavaScript separado -->
     <script src="script.js"></script>
 </body>
 </html>
-
