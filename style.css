@@ -1,3 +1,157 @@
-// Atualmente a interface funciona puramente com HTML/CSS estrutural.
-// Você pode utilizar este arquivo no futuro para carregar transições de dados dinâmicas.
-console.log("Interface do Portal de Recursos Hídricos carregada com sucesso.");
+/* Configurações Globais Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body, html {
+    height: 100%;
+    overflow: hidden;
+    background-color: #F4F5F7;
+}
+
+/* Container Principal em Grid Flexível */
+.interface-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Estilização da Barra Lateral Esquerda */
+.sidebar {
+    width: 25%;
+    min-width: 320px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px 40px;
+    z-index: 10;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.portal-text {
+    font-size: 1.5rem;
+    color: #555;
+    display: block;
+}
+
+.main-logo {
+    font-size: 3.5rem;
+    color: #0B2545;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-top: -5px;
+}
+
+.description-area h2 {
+    font-size: 1.25rem;
+    color: #134074;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.description-area p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.brand-logo {
+    font-weight: bold;
+    color: #0B2545;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.social-icons a {
+    color: #888;
+    margin-right: 12px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.social-icons a:hover {
+    color: #134074;
+}
+
+/* Área das Colunas de Navegação */
+.navigation-panels {
+    display: flex;
+    flex: 1;
+    height: 100%;
+}
+
+/* Item de Painel Individual */
+.panel-item {
+    flex: 1;
+    height: 100%;
+    position: relative;
+    text-decoration: none;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 60px;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+/* Efeito de expansão ao passar o mouse */
+.panel-item:hover {
+    flex: 1.3;
+    filter: brightness(1.1);
+}
+
+/* Textos na Vertical dentro dos Painéis */
+.panel-content {
+    transform: rotate(-90deg);
+    white-space: nowrap;
+    position: absolute;
+    bottom: 140px;
+}
+
+.panel-title {
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Escalonamento de Cores em Degradê Azul (Inspirado no print) */
+.panel-1 { background-color: #A0C4FF; }
+.panel-2 { background-color: #70A1FF; }
+.panel-3 { background-color: #4A81D4; }
+.panel-4 { background-color: #2F6690; }
+.panel-5 { background-color: #134074; }
+.panel-6 { background-color: #0B2545; }
+
+/* Responsividade Básica para Telas Menores */
+@media (max-width: 900px) {
+    .interface-container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        padding: 30px;
+    }
+    .navigation-panels {
+        flex-direction: column;
+    }
+    .panel-item {
+        height: 60px;
+        padding-bottom: 0;
+        align-items: center;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .panel-content {
+        transform: rotate(0deg);
+        position: static;
+    }
+}
