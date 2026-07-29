@@ -3,62 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Porta Aqua - Informativo Hídrico</title>
-    <!-- Vinculando o arquivo CSS separado -->
+    <title>Portal da Água</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- PAINEL LATERAL ESQUERDO -->
-    <div class="info-panel">
-        <div class="brand">
-            <h2>Porta Aqua</h2>
-            <h1>Aqua</h1>
-        </div>
-        
-        <div class="description">
-            <h3>Cada gota conta, pense no amanhã</h3>
-            <p>A base conceitual para a disponibilização de informações sobre a crise, a poluição e as soluções urgentes para as águas do nosso planeta.</p>
-        </div>
-
-        <div class="logo-footer">
-            ▶ AGUAVIVA
+    <div id="loading-screen" class="hidden">
+        <div class="loader">
+            <div class="gota"></div>
+            <p>Carregando dados globais...</p>
         </div>
     </div>
 
-    <!-- SEÇÃO DAS BARRAS DE NAVEGAÇÃO INTERATIVAS -->
-    <div class="bars-container">
-        <a href="#diagnosticos" class="nav-bar bar-1" data-destino="Ferramenta de Diagnósticos de Poluição">
-            <span class="bar-text">LER DIAGNÓSTICOS E PROBLEMAS</span>
-        </a>
-        
-        <a href="#mapas" class="nav-bar bar-2" data-destino="Mapa de Monitoramento em Tempo Real">
-            <span class="bar-text">NAVEGAR EM MAPAS CRÍTICOS</span>
-        </a>
-        
-        <a href="#indicadores" class="nav-bar bar-3" data-destino="Painel de Gráficos e Estatísticas">
-            <span class="bar-text">EXPLORAR INDICADORES E GRÁFICOS</span>
-        </a>
-        
-        <a href="#linha-tempo" class="nav-bar bar-4" data-destino="Linha do Tempo das Mudanças Climáticas">
-            <span class="bar-text">LINHA DO TEMPO INTERATIVA</span>
-        </a>
-        
-        <a href="#solucoes" class="nav-bar bar-5" data-destino="Catálogo de Soluções Sustentáveis Globais">
-            <span class="bar-text">CONSULTAR SOLUÇÕES GLOBAIS</span>
-        </a>
-        
-        <a href="#reportagens" class="nav-bar bar-6" data-destino="Central de Reportagens e Artigos">
-            <span class="bar-text">VER REPORTAGENS E ARTIGOS</span>
-        </a>
-    </div>
+    <main class="container">
+        <aside class="sidebar">
+            <div class="content-sidebar">
+                <h1>Portal da água</h1>
+                <p>A água nos ensina que a persistência suaviza os maiores obstáculos e que cada gota, por menor que pareça, tem o poder de dar vida a um novo recomeço.</p>
+            </div>
+            <div class="controls">
+                <span class="play-btn">▶</span>
+                <div class="dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </aside>
 
-    <!-- RODAPÉ COMPLEMENTAR -->
-    <div class="fixed-footer">
-        IFA 2026
-    </div>
+        <section class="columns-container">
+            
+            <div class="column col-1" style="--bg-img: url('img/bg-problemas.jpg');">
+                <div class="col-header">Principais Problemas</div>
+                <div class="col-content">
+                    <p>Milhões sofrem com a escassez e poluição. Descubra a raiz da crise hídrica que ameaça o nosso futuro.</p>
+                    <button class="btn-saiba-mais" data-target="problemas.html">Saiba mais</button>
+                </div>
+            </div>
 
-    <!-- Vinculando o arquivo JavaScript separado -->
+            <div class="column col-2" style="--bg-img: url('img/bg-mapas.jpg');">
+                <div class="col-header">Navegar em mapas críticos</div>
+                <div class="col-content">
+                    <p>Explore infográficos detalhados sobre países sem acesso a saneamento básico e água potável.</p>
+                    <button class="btn-saiba-mais" data-target="mapas.html">Saiba mais</button>
+                </div>
+            </div>
+
+            <div class="column col-3" style="--bg-img: url('img/bg-graficos.jpg');">
+                <div class="col-header">Explorar indicadores e gráficos</div>
+                <div class="col-content">
+                    <p>Analise os dados reais do consumo, desperdício e a projeção para as próximas décadas.</p>
+                    <button class="btn-saiba-mais" data-target="graficos.html">Saiba mais</button>
+                </div>
+            </div>
+
+            <div class="column col-4" style="--bg-img: url('img/bg-tempo.jpg');">
+                <div class="col-header">Linha do tempo interativa</div>
+                <div class="col-content">
+                    <p>Viaje pela história e entenda como chegamos ao cenário atual de estresse hídrico.</p>
+                    <button class="btn-saiba-mais" data-target="linha-tempo.html">Saiba mais</button>
+                </div>
+            </div>
+
+            <div class="column col-5" style="--bg-img: url('img/bg-solucoes.jpg');">
+                <div class="col-header">Consultar soluções globais</div>
+                <div class="col-content">
+                    <p>Inovações tecnológicas e políticas públicas que estão salvando ecossistemas pelo mundo.</p>
+                    <button class="btn-saiba-mais" data-target="solucoes.html">Saiba mais</button>
+                </div>
+            </div>
+
+            <div class="column col-6" style="--bg-img: url('img/bg-ferramentas.jpg');">
+                <div class="col-header">Ferramentas: Pegada Hídrica</div>
+                <div class="col-content">
+                    <p>Utilize nossa calculadora interativa e descubra quantos litros de água seu estilo de vida consome.</p>
+                    <button class="btn-saiba-mais" data-target="calculadora.html">Acessar Ferramenta</button>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
     <script src="script.js"></script>
 </body>
 </html>
