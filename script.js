@@ -1,20 +1,29 @@
-// Seleciona todas as barras de navegação do site
-const navBars = document.querySelectorAll('.nav-bar');
+document.addEventListener("DOMContentLoaded", () => {
+    const botoesSaibaMais = document.querySelectorAll(".btn-saiba-mais");
+    const loadingScreen = document.getElementById("loading-screen");
 
-navBars.forEach(bar => {
-    bar.addEventListener('click', function(event) {
-        // Impede o redirecionamento padrão do link para podermos ver o aviso rodando
-        event.preventDefault(); 
-        
-        // Pega as informações contidas nos atributos personalizados criados no HTML
-        const destinoInformativo = this.getAttribute('data-destino');
-        const linkDestinoReal = this.getAttribute('href');
-        
-        // Exibe um alerta útil para o cidadão indicando o carregamento da ferramenta
-        alert(`Encaminhando você para o nosso painel público:\n👉 ${destinoInformativo}`);
-        
-        // Quando você tiver as subpáginas reais prontas, remova o "event.preventDefault()" lá de cima 
-        // ou descomente a linha abaixo para fazer o redirecionamento imediato do navegador:
-        // window.location.href = linkDestinoReal;
+    botoesSaibaMais.forEach(botao => {
+        botao.addEventListener("click", function(e) {
+            e.preventDefault(); // Previne comportamento padrão
+            
+            const paginaDestino = this.getAttribute("data-target");
+
+            // Mostra a tela de carregamento
+            loadingScreen.classList.remove("hidden");
+
+            // Simula um tempo de carregamento de API/Dados para ser persuasivo (1.5 segundos)
+            setTimeout(() => {
+                // Redireciona o usuário para a página com os dados
+                // window.location.href = paginaDestino; 
+                
+                /* NOTA: Como você precisa criar as páginas de destino (problemas.html, etc),
+                   estou usando um alerta apenas para testar a lógica se o arquivo não existir.
+                   Descomente a linha acima e remova o alert e o classList.add abaixo em produção. */
+                
+                alert(`Redirecionando para a página detalhada: ${paginaDestino}`);
+                loadingScreen.classList.add("hidden"); 
+
+            }, 1500);
+        });
     });
 });
